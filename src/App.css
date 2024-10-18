@@ -1,38 +1,1324 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Log.jsx */
+
+.log-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+
+.logform {
+  background-color: rgb(181, 150, 130);
+  border-radius: 20px;
+  padding: 30px;
+  border: 2px solid black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  width: 25%;
+  height: 400px;
+  color: rgb(0, 0, 0);
+}
+
+.headin {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+label {
+  margin: 10px 0 5px;
+  display: block;
+  font-size: 1.2rem;
+}
+
+input {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input:focus {
+  border-color: blue;
+  outline: none;
+}
+
+.log-btn {
+  background-color: var(--Secondary-color);
+  color: white;
+  border: none;
+  padding: 15px;
+  width: 50%;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-left: 90px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.log-btn:hover {
+  background-color: rgb(69, 209, 74);
+}
+.register-link {
+  font-size: 1.2rem;
+  margin: 30px 0;
+}
+
+/* Reg.jsx */
+
+.regbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+.reg-label {
+  display: flex;
+  width: 50%;
+  margin-right: 160px;
+}
+.regform {
+  display: block;
+  justify-content: flex-start;
+  background-color: rgb(198, 175, 151);
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 30%;
+  height: 460px; /* Adjust height to accommodate all fields */
+  padding: 30px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 80%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: var(--Secondary-color);
+  color: white;
+  border: none;
+  padding: 15px;
+  width: 50%;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-left: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(69, 209, 74);
+}
+
+/* Header.jsx */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+}
+nav a {
+  font-size: 1.2rem;
+  color: white;
+  margin: 0 20px;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  transition: text-decoration 0.2s ease 0.5s;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav .head-btn button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  
+
+}
+.user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-info h3 {
+  color: #ffffff;
+}
+.user-info img {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+}
+.user-info a {
+  padding: 5px 0 5px 0;
+}
+.head-btn {
+  width: 20%;
+}
+.logo-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100px;
+  padding-left: 50px;
+  overflow: hidden;
+  margin-top: -6px;
+}
+.logo-image img {
+  height: 60px;
+  width: 150px;
+}
+section {
+  padding: 20px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Hompage.jsx */
+/* Slideshow Container */
+.slideshow-container {
+  height: 500px;
+  width: 100%; /* Set the maximum width of the slideshow */
+  position: relative; /* Relative positioning for the navigation buttons */
+  margin: 0; /* Center the slideshow container */
+  overflow: hidden; /* Hide the overflow to prevent scrolling */
+}
+
+/* Slides */
+.mySlides {
+  display: none; /* Hide all slides initially */
+  animation: fade 1s ease-in-out; /* Optional fade effect */
+}
+
+/* Fading animation */
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navigation Buttons */
+.slideshow-container button {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  transition: 0.3s; /* Smooth transition */
+}
+
+/* Positioning of Buttons */
+.slideshow-container button:nth-of-type(1) {
+  left: 0; /* Left navigation button */
+  border-radius: 3px 0 0 3px;
+}
+
+.slideshow-container button:nth-of-type(2) {
+  right: 0; /* Right navigation button */
+  border-radius: 0 3px 3px 0;
+}
+
+/* On hover, add a darker background */
+.slideshow-container button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Image Styles */
+.mySlides img {
+  vertical-align: middle; /* Vertically align the images */
+}
+
+/* Responsive: Adjust the height for smaller screens */
+@media only screen and (max-width: 600px) {
+  .slideshow-container button {
+    font-size: 12px; /* Smaller font size for buttons */
+    padding: 12px; /* Smaller padding */
+  }
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
   }
 }
+.search-course1 {
+  display: flex;
+  justify-content: center;
+}
+.search-course1 input[type="text"] {
+  width: 500px;
+  padding: 15px 20px;
+  font-size: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: rgba(0, 0, 0);
+  transition: border-color 0.3s ease;
+}
+/* Section 2 (Cards) */
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px 0;
+}
+.daata-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card11 {
+  border: 1px solid #ccc;
+  width: 380px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card11 img {
+  height: 200px;
+  width: 300px;
+}
+.buy-now-button,
+.view-all-button {
+  background-color: #34c759; /* add a green background color */
+  color: #fff; /* change the text color to white */
+  border: none; /* remove the border */
+  padding: 10px 20px; /* add some padding */
+  margin: 20px;
+  font-size: 16px; /* set the font size */
+  cursor: pointer; /* change the cursor to a pointer */
+  border-radius: 5px; /* add a rounded corner */
+}
 
-.App-header {
-  background-color: #282c34;
+.buy-now-button:hover,
+.view-all-button:hover {
+  background-color: #2ecc71; /* change the background color on hover */
+}
+.course-btn {
+  display: flex;
+  justify-content: center;
+}
+/* Section 3 (Images with Spacing) */
+.images-grid {
+  display: flex;
+  justify-content: center; /* Center the images horizontally */
+  flex-wrap: wrap; /* Wrap images to the next line if necessary */
+  gap: 70px; /* Equal space between the image items */
+  margin-top: 20px; /* Space between the heading and images */
+}
+
+.image-item {
+  text-align: center; /* Center the image and description */
+  padding: 10px; /* Padding around the entire image item */
+  width: 180px; /* Set a fixed width for consistency */
+}
+
+.image-item img {
+  width: 100%; /* Make the image take full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the images round */
+  padding: 10px; /* Padding around the image */
+  border: 2px solid #ddd; /* Optional border for a clean look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.description {
+  font-size: 14px; /* Adjust the text size */
+  color: #555; /* Change text color */
+  margin-top: 10px; /* Space between the image and description */
+}
+
+/* Section 4 (Two Column Layout) */
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  font-size: 20%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.two-column-layout div {
+  flex: 1; /* Makes both sections equal in width */
+  padding: 20px;
+  font-size: 20px;
+}
+.about {
+  font-size: 2.3rem;
+  width: 90%;
+  line-height: 1.5;
+}
+.about,
+.contact {
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.contact-container {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 800px;
+  max-width: 110%;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1;
+}
+
+.contact-form {
+  padding-right: 20px;
+}
+
+.contact-form h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20px;
+  border-left: 1px solid #ddd;
+}
+
+.contact-info h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.contact-info img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.contact-info .placeholder {
+  width: 100%;
+  height: 150px;
+  background-color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Footer.jsx */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #030101;
+  color: white;
+  padding: 20px;
+  font-size: 14px;
+}
+.footer div {
+  width: 23%;
+}
+.footer h3 {
+  font-size: 16px;
+  margin: 10px 20px;
+}
+.footer p {
+  color: #ffffff;
+  margin: 5px 0;
+  cursor: pointer;
+  justify-content: center;
+}
+.footer p:hover {
+  text-decoration: underline;
+}
+.footer a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  justify-content: center;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .contact1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .helpful-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app-links {
+  display: flex;
+  flex-direction: column;
+}
+.app-links img {
+  width: 130px;
+  margin: 10px;
+  cursor: pointer;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background-color: rgb(0, 0, 0);
+}
+.social-icons a {
+  text-decoration: none;
+}
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+}
+
+/* Courses.jsx */
+:root {
+  --Secondary-color: rgb(76, 175, 80);
+}
+.search-c {
+  background: linear-gradient(to bottom, rgb(144, 222, 122), white);
+  padding: 40px 0;
+  height: 300px;
+}
+.search-c1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.search-course {
+  color: rgba(0, 0, 0);
+  display: flex;
+}
+.search-course input[type="text"] {
+  width: 500px;
+  padding: 15px 20px;
+  font-size: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: rgba(0, 0, 0);
+  transition: border-color 0.3s ease;
+}
+
+.search-course input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.search-course input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.search-icon {
+  padding: 0 25px;
+  padding-top: 5px;
+  height: 45px;
+  margin-left: -4px;
+  margin-top: 5px;
+  font-size: 25px;
+  color: #888;
+  background-color: var(--Secondary-color);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.content {
+  width: 85%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  margin-top: -180px;
+  border-radius: 10px;
+}
+.popular-now {
+  padding: 10px 25px;
+}
+h2 {
+  color: #333;
+  margin: 20px;
+}
+
+.courses {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 20px;
+  width: 23%;
+  margin: 10px 20px;
+  text-align: center;
+}
+.course-card img {
+  height: 160px;
+  width: 250px;
+}
+.course-card h3 {
+  color: #405d72;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  color: #758690;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.content-btn {
+  background-color: var(--Secondary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.content-btn:hover {
+  background-color: #45a049;
+}
+
+.course-categories {
+  margin: 30px 0;
+  padding: 20px 30px;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+
+.category-btn {
+  background-color: #9eaeed;
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  padding: 20px 15px;
+  width: 30%;
+  cursor: pointer;
+  text-align: center;
+  margin: 10px 0;
+}
+.category-btn:hover {
+  background-color: #1f47e9af;
+}
+.live-courses {
+  margin: 25px 0;
+}
+.live-course {
+  padding: 0 30px;
+}
+.view-all {
+  display: flex;
+  justify-content: space-between;
+}
+.view-all-al {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.view-all-al:hover {
+  text-decoration: underline;
+}
+
+/* Coursepage.jsx */
+
+.container {
+  width: 90%;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   min-height: 100vh;
+  position: relative; /* Added to allow absolute positioning of the card inside the container */
+}
+.circle-container {
+  display: flex;
+  gap: 0px; /* Adds space between the circles */
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  gap: 10px;
+}
+
+.circle-1 {
+  background-color: #000;
+  left: 50px;
+  top: 50px;
+  clip-path: radial-gradient(50% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.circle-2 {
+  background-color: #808080;
+  left: 150px;
+  top: 50px;
+  background: radial-gradient(circle at 100% 50%, #fff, #808080);
+}
+
+.circle-3 {
+  background-color: #224560;
+  left: 250px;
+  top: 50px;
+}
+.header {
+  text-align: left;
+}
+.header h1 {
+  font-size: 2rem;
+  margin: 20px 50px;
+  text-align: left;
+}
+.header p {
+  margin: 25px 50px;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: left;
+}
+.header h5 {
+  margin: 20px 50px;
+  text-align: left;
+}
+.img {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+}
+
+.image-stack {
+  display: flex; /* Align images in a row */
+  margin: 0 20px; /* Space between images and text */
+}
+
+.lecturer-img {
+  width: 80px; /* Set the desired width for the images */
+  height: auto; /* Keep aspect ratio */
+  margin: right -1px; /* Space between the images */
+}
+
+.text-content {
+  max-width: 400px; /* Set a max width for the text container */
+}
+
+.text-content h3 {
+  margin-top: 0; /* Remove default margin */
+}
+
+.enroll-container {
+  text-align: center;
+  margin-top: 4000px;
+}
+
+.enroll-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #88e426; /* Green background */
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid #62a364;
+  text-align: center;
+  margin-top: 60px;
+  margin-left: 40px;
+}
+
+.enroll-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.enroll-btn br {
+  line-height: 1.5; /* Adjust line spacing */
+}
+
+.enrolled-text {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #333;
+}
+.cp-video {
+  display: flex;
+  align-items: center;
+}
+.Preview {
+  margin: 0 40px;
+  margin-top: 50px;
+}
+.Preview button {
+  background-color: rgb(46, 129, 218);
+  color: #ffffff;
+}
+.Preview button:hover {
+  background-color: rgba(46, 129, 218, 0.781);
+}
+.details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Card positioned at the top-right corner inside the container */
+.card {
+  width: 250px;
+  height: 160px;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  margin-right: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 8px;
+  padding: 40px 30px;
+}
+
+.syllabus {
+  margin-top: 20px;
+}
+
+.syllabus h3 {
+  font-size: 2rem;
+  margin: 10px 20px;
+}
+
+.modules {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card1 {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px;
+  width: calc(33.33% - 40px);
+  flex-grow: 1;
+}
+
+.card1 h4 {
+  margin-top: 0;
+}
+
+.card1 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card1 li {
+  margin-bottom: 8px;
+}
+
+.img1 {
+  display: flex;
+  border-radius: 50%;
+  padding: 10px 20px;
+}
+.slider-container {
+  position: relative;
+  max-width: 100%; /* Adjust the width of the container */
+  margin: auto;
+  overflow: hidden; /* Hide overflow for smooth transitions */
+}
+
+.slider-images {
+  display: flex;
+  width: 100%; /* Take full width */
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.slider-images img {
+  width: 100%; /* Make images take full container width */
+  height: auto; /* Keep the aspect ratio */
+  flex-shrink: 0; /* Prevent shrinking of images */
+}
+
+.slider-container img {
+  border-radius: 10px;
+}
+
+/* Dashboard.jsx */
+.dash-cont {
+  margin: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.dash-cont1 {
+  width: 30%;
+  padding: 20px;
+  background-color: #928686;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card,
+.info-card,
+.resume-card {
+  background-color: #b1acac;
+  color: rgba(0, 0, 0);
+  height: 150px;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.profile-card {
+  height: 200px;
+  background-color: #eee4e1;
+}
+.profile-header {
+  text-align: center;
+  position: relative;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-header h1 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.profile-header p {
+  font-size: 14px;
+  color: #666;
+}
+
+.edit-btn1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+  color: var(--Secondary-color);
+  font-size: 16px;
+}
+.edit-btn2 {
+  text-decoration: none;
+  color: var(--Secondary-color);
+  font-size: 16px;
+}
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+.info-card {
+  padding-bottom: 0;
+  background-color: #eee4e1;
+}
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.info-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.email-icon,
+.phone-icon,
+.location-icon {
+  margin-right: 10px;
+}
+.resume-card {
+  height: 100px;
+  padding-bottom: 0;
+  background-color: #eee4e1;
+}
+
+.resume-card h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.add-resume {
+  color: var(--Secondary-color);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.resume-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.container2 {
+  background-color: #928686;
+  width: 50%;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Card Styles */
+.dash-card {
+  background-color: #eee4e1;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.topic-badge {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sql {
+  color: black;
+}
+
+.python {
+  color: black;
+}
+
+.java {
+  color: black;
+}
+
+/* Badge Icon */
+.badge-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #333333;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.progress1 {
+  height: 100%;
+  width: 50%;
+  background-color: var(--Secondary-color);
+  border-radius: 5px;
+}
+.progress2 {
+  height: 100%;
+  width: 60%;
+  background-color: var(--Secondary-color);
+  border-radius: 5px;
+}
+.progress3 {
+  height: 100%;
+  width: 20%;
+  background-color: var(--Secondary-color);
+  border-radius: 5px;
+}
+/* Percentage and Points Text */
+p {
+  font-size: 14px;
+  margin: 10px 0;
+  color: black;
+}
+
+/* Button Styles */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-gray {
+  background-color: var(--Secondary-color);
+  color: #ffffff;
+}
+/* Video.jsx */
+
+/* Basic Styling */
+
+/* Section Styling */
+.section {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.section p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+/* Layout for first section */
+.section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left {
+  width: 60%;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 35%;
+  height: 300px;
+}
+.right p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+/* Styling for accordion */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.panel ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.panel ul li {
+  padding: 5px 0;
+}
+
+/* Styling for Material Button */
+.material-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.material-button:hover {
+  background-color: #45a049;
+}
+
+/* Video and Button Container Styling */
+.video-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.video-container iframe {
+  margin-bottom: 15px;
+}
+
+/* Sticky Notes Section */
+.sticky-notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.sticky-note {
+  background-color: #f9f9a9;
+  width: 30%;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.note-text {
+  margin-bottom: 10px;
+}
+
+.note-input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.save-button {
+  padding: 5px 10px;
+  background-color: #2196f3;
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.save-button:hover {
+  background-color: #0b7dda;
 }

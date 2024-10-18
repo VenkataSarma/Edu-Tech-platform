@@ -25,4 +25,4 @@ This is an Online Learning Platform designed to provide a seamless learning expe
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/VenkataSar/your-repo-name.git](https://github.com/VenkataSarma/Edu-Tech-platform.git)
+   git clone [https://github.com/VenkataSarma/Edu-Tech-platform.git]

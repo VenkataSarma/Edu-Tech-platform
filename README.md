@@ -5,9 +5,6 @@
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Overview
 This is an Online Learning Platform designed to provide a seamless learning experience for both instructors and learners. Instructors can post content in various formats, while learners can access these materials and track their progress through a user-friendly dashboard. The platform encourages consistent learning and allows access to paid courses through knowledge assessments.
@@ -21,12 +18,11 @@ This is an Online Learning Platform designed to provide a seamless learning expe
 
 ## Technologies Used
 - **Frontend**: HTML, CSS, JavaScript, React
-- **Backend**: [Specify if you are using any backend technology, e.g., Node.js, Express]
-- **Database**: SQL (e.g., MySQL, PostgreSQL)
-- **Hosting**: [Specify if applicable, e.g., Firebase, Heroku]
+- **Backend**:  Node.js
+- **Database**: SQL 
 - **Version Control**: Git and GitHub
 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/VenkataSar/your-repo-name.git
+   git clone [https://github.com/VenkataSar/your-repo-name.git](https://github.com/VenkataSarma/Edu-Tech-platform.git)
